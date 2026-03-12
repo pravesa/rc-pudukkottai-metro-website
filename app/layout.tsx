@@ -1,5 +1,14 @@
 import type { Metadata } from 'next';
+import { Barlow_Condensed } from 'next/font/google';
 import './globals.css';
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  variable: '--font-barlow-condensed',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Rotary Club of Pudukkottai Metro | Service Above Self',
@@ -15,8 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body>{children}</body>
+    <html
+      lang='en'
+      className={barlowCondensed.variable}
+      suppressHydrationWarning
+    >
+      <body className={barlowCondensed.className}>{children}</body>
     </html>
   );
 }
