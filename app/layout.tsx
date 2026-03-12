@@ -1,12 +1,26 @@
 import type { Metadata } from 'next';
-import { Barlow_Condensed } from 'next/font/google';
+import { Barlow_Condensed, Source_Serif_4, Inter } from 'next/font/google';
 import './globals.css';
 
-const barlowCondensed = Barlow_Condensed({
+export const barlowCondensed = Barlow_Condensed({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  style: ['normal', 'italic'],
+  weight: ['400', '600', '700', '800'],
   variable: '--font-barlow-condensed',
+  display: 'swap',
+});
+
+export const sourceSerif4 = Source_Serif_4({
+  subsets: ['latin'],
+  weight: ['300', '400', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-source-serif-4',
+  display: 'swap',
+});
+
+export const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-inter',
   display: 'swap',
 });
 
@@ -20,16 +34,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang='en'
-      className={barlowCondensed.variable}
-      suppressHydrationWarning
-    >
-      <body className={barlowCondensed.className}>{children}</body>
+    <html lang='en'>
+      <body
+        className={`${barlowCondensed.variable} ${sourceSerif4.variable} ${inter.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
