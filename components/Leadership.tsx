@@ -49,18 +49,19 @@ function LeaderCard({ leader }: { leader: (typeof leaders)[number] }) {
             src={leader.photo}
             alt={leader.name}
             fill
-            className='object-cover object-top transition-transform duration-500 group-hover:scale-105'
+            sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw'
+            className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
             onError={() => setImgError(true)}
           />
         )}
       </div>
 
       {/* Info strip */}
-      <div className='px-5 py-4 border-t-[3px] border-[#17458f] flex flex-col gap-1'>
-        <span className='font-display text-xs text-[#17458f] tracking-widest uppercase font-bold'>
+      <div className='px-4 py-4 border-t-[3px] border-[#17458f] flex flex-col gap-1'>
+        <span className='font-display text-xs text-[#17458f] tracking-widest uppercase font-bold leading-tight'>
           {leader.role}
         </span>
-        <p className='font-display text-xl font-bold text-gray-800 uppercase tracking-wide leading-tight'>
+        <p className='font-display text-lg font-bold text-gray-800 uppercase tracking-wide leading-tight'>
           {leader.name}
         </p>
         <p className='text-gray-400 text-xs uppercase tracking-wider font-medium'>
@@ -91,13 +92,11 @@ export default function Leadership() {
           </p>
         </div>
 
-        {/* Cards — constrained width so 3 cards don't stretch across full 7xl container */}
-        <div className='max-w-4xl mb-16'>
-          <div className='grid grid-cols-1 sm:grid-cols-3 gap-6'>
-            {leaders.map((leader) => (
-              <LeaderCard key={leader.role} leader={leader} />
-            ))}
-          </div>
+        {/* 4 cols on lg+, 2 cols on sm/md, 1 col on mobile */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>
+          {leaders.map((leader) => (
+            <LeaderCard key={leader.role} leader={leader} />
+          ))}
         </div>
 
         {/* Rotary Year Banner */}
