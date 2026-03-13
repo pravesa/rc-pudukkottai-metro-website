@@ -89,7 +89,7 @@ export default function Membership() {
 
               <Button
                 asChild
-                className='bg-rotary-gold hover:bg-yellow-400 text-white font-display font-bold tracking-wider uppercase rounded-sm px-6'
+                className='bg-rotary-gold hover:bg-yellow-400! text-white font-display font-bold tracking-wider uppercase rounded-sm px-6'
               >
                 <a href='mailto:pudukkottaimetro@gmail.com'>Get In Touch</a>
               </Button>

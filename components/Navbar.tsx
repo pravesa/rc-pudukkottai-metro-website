@@ -76,7 +76,7 @@ export default function Navbar() {
 
             <Button
               asChild
-              className='bg-rotary-gold hover:bg-yellow-500 text-white font-semibold px-5 text-sm rounded-sm'
+              className='bg-rotary-gold hover:bg-yellow-400! text-white font-semibold px-5 text-sm rounded-sm'
             >
               <a href='#membership'>Join Us</a>
             </Button>
@@ -122,7 +122,7 @@ export default function Navbar() {
 
             <Button
               asChild
-              className='w-full bg-rotary-gold hover:bg-yellow-500 text-white font-semibold rounded-sm'
+              className='w-full bg-rotary-gold hover:bg-yellow-400! text-white font-semibold rounded-sm'
             >
               <a
                 href='#membership'
