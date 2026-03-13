@@ -7,28 +7,24 @@ const leaders = [
     role: 'President',
     name: 'P Harihara Sudhakaran',
     initials: 'HS',
-    color: '#17458f',
     photo: '/leaders/president.jpg',
   },
   {
     role: 'Executive Secretary / Director',
     name: 'J Rajendran',
     initials: 'JR',
-    color: '#17458f',
     photo: '/leaders/executive-secretary.jpg',
   },
   {
     role: 'Secretary',
     name: 'C Parthiban',
     initials: 'CP',
-    color: '#17458f',
     photo: '/leaders/secretary.jpg',
   },
   {
     role: 'Treasurer',
     name: 'S Kamalakannan',
     initials: 'SK',
-    color: '#0067c8',
     photo: '/leaders/treasurer.jpg',
   },
 ];
@@ -41,10 +37,7 @@ function LeaderCard({ leader }: { leader: (typeof leaders)[number] }) {
       {/* Photo — fixed height keeps cards compact on large screens */}
       <div className='relative w-full h-64 overflow-hidden bg-gray-100'>
         {/* Initials fallback */}
-        <div
-          className='absolute inset-0 flex items-center justify-center'
-          style={{ backgroundColor: leader.color }}
-        >
+        <div className='absolute inset-0 bg-[#17458f] flex items-center justify-center'>
           <span className='font-display font-extrabold text-white/20 text-8xl select-none'>
             {leader.initials}
           </span>
@@ -63,14 +56,8 @@ function LeaderCard({ leader }: { leader: (typeof leaders)[number] }) {
       </div>
 
       {/* Info strip */}
-      <div
-        className='px-5 py-4 border-t-[3px] flex flex-col gap-1'
-        style={{ borderColor: leader.color }}
-      >
-        <span
-          className='font-display text-xs tracking-widest uppercase font-bold'
-          style={{ color: leader.color }}
-        >
+      <div className='px-5 py-4 border-t-[3px] border-[#17458f] flex flex-col gap-1'>
+        <span className='font-display text-xs text-[#17458f] tracking-widest uppercase font-bold'>
           {leader.role}
         </span>
         <p className='font-display text-xl font-bold text-gray-800 uppercase tracking-wide leading-tight'>
