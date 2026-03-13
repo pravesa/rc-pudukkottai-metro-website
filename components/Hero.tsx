@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ChevronDown } from 'lucide-react';
@@ -30,58 +31,17 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* Large decorative wheel */}
-      <div className='absolute right-[-8%] top-[-10%] opacity-10'>
-        <svg
-          viewBox='0 0 600 600'
-          width='600'
-          height='600'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <circle
-            cx='300'
-            cy='300'
-            r='280'
-            stroke='white'
-            strokeWidth='20'
-            fill='none'
-          />
-          <circle cx='300' cy='300' r='80' fill='white' />
-          <circle
-            cx='300'
-            cy='300'
-            r='50'
-            fill='transparent'
-            stroke='transparent'
-          />
-          {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
-            const rad = (angle * Math.PI) / 180;
-            const x1 = 300 + 80 * Math.cos(rad);
-            const y1 = 300 + 80 * Math.sin(rad);
-            const x2 = 300 + 220 * Math.cos(rad);
-            const y2 = 300 + 220 * Math.sin(rad);
-            return (
-              <line
-                key={i}
-                x1={x1}
-                y1={y1}
-                x2={x2}
-                y2={y2}
-                stroke='white'
-                strokeWidth='24'
-              />
-            );
-          })}
-          <circle
-            cx='300'
-            cy='300'
-            r='220'
-            stroke='white'
-            strokeWidth='20'
-            fill='none'
-          />
-        </svg>
+      {/* Official Rotary International wheel */}
+      <div className='absolute right-[-8%] top-[-10%] opacity-5 pointer-events-none select-none'>
+        <Image
+          src='/rotary-logo.png'
+          alt=''
+          width={600}
+          height={600}
+          priority
+          aria-hidden
+          className='brightness-0 invert'
+        />
       </div>
 
       {/* Content */}

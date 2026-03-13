@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Users, Globe, Heart, Award } from 'lucide-react';
 
@@ -83,51 +84,12 @@ export default function About() {
         {/* About Rotary International Band */}
         <div className='mt-16 bg-[#17458f] text-white rounded-sm p-10 flex flex-col md:flex-row items-center gap-8'>
           <div className='shrink-0'>
-            <svg
-              viewBox='0 0 100 100'
-              width='80'
-              height='80'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <circle
-                cx='50'
-                cy='50'
-                r='46'
-                stroke='#f7a81b'
-                strokeWidth='4'
-                fill='none'
-              />
-              <circle cx='50' cy='50' r='13' fill='#f7a81b' />
-              <circle cx='50' cy='50' r='8' fill='#17458f' />
-              {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
-                const rad = (angle * Math.PI) / 180;
-                const x1 = 50 + 13 * Math.cos(rad);
-                const y1 = 50 + 13 * Math.sin(rad);
-                const x2 = 50 + 34 * Math.cos(rad);
-                const y2 = 50 + 34 * Math.sin(rad);
-                return (
-                  <line
-                    key={i}
-                    x1={x1}
-                    y1={y1}
-                    x2={x2}
-                    y2={y2}
-                    stroke='#f7a81b'
-                    strokeWidth='5'
-                    strokeLinecap='round'
-                  />
-                );
-              })}
-              <circle
-                cx='50'
-                cy='50'
-                r='34'
-                stroke='#f7a81b'
-                strokeWidth='4'
-                fill='none'
-              />
-            </svg>
+            <Image
+              src='/rotary-logo.png'
+              alt='Rotary International'
+              width={96}
+              height={96}
+            />
           </div>
           <div>
             <h3 className='font-display text-2xl font-bold uppercase tracking-wide mb-2'>
