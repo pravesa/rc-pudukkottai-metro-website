@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 const focusAreas = [
   {
     number: '01',
-    title: 'Peace & Conflict Prevention',
+    title: 'PeaceBuilding & Conflict Prevention',
     description:
       'Supporting initiatives that promote peace, cooperation, and understanding in communities worldwide.',
     icon: '🕊️',
@@ -43,7 +43,7 @@ const focusAreas = [
   },
   {
     number: '06',
-    title: 'Economic & Community Development',
+    title: 'Community Economic Development',
     description:
       'Developing economies, reducing poverty, and giving communities the tools they need to thrive.',
     icon: '🏘️',
