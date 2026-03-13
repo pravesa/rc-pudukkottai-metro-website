@@ -81,14 +81,6 @@ export default function Footer() {
               </p>
               <p>
                 <span className='text-white/40 text-xs uppercase tracking-wider block mb-0.5'>
-                  Meets
-                </span>
-                Saturday at 7:00 PM
-                <br />
-                <span className='text-xs'>Twice a month</span>
-              </p>
-              <p>
-                <span className='text-white/40 text-xs uppercase tracking-wider block mb-0.5'>
                   Email
                 </span>
                 <a
