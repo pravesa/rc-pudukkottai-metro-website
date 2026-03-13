@@ -39,22 +39,38 @@ export default function Navbar() {
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
-          {/* Logo */}
-          <Link href='/' className='flex items-center'>
-            <div className='relative h-14 w-auto'>
-              {/* White version for hero (un-scrolled) — achieved via CSS filter */}
-              <Image
-                src='/logo.png'
-                alt='Rotary Club of Pudukkottai Metro'
-                width={220}
-                height={57}
-                className={cn(
-                  'h-14 w-auto object-contain transition-all duration-300',
-                  !scrolled && 'brightness-0 invert', // makes the blue+gold logo white on dark hero
-                )}
-                priority
-              />
-            </div>
+          {/* Logos */}
+          <Link href='/' className='flex items-center gap-3'>
+            {/* Rotary wordmark + club name */}
+            <Image
+              src='/logo.png'
+              alt='Rotary Club of Pudukkottai Metro'
+              width={200}
+              height={52}
+              className={cn(
+                'h-10 w-auto object-contain transition-all duration-300',
+                !scrolled && 'brightness-0 invert',
+              )}
+              priority
+            />
+
+            {/* Separator */}
+            <div
+              className={cn(
+                'w-px h-8 transition-colors duration-300',
+                scrolled ? 'bg-gray-300' : 'bg-white/30',
+              )}
+            />
+
+            {/* Club seal */}
+            <Image
+              src='/club-logo.jpg'
+              alt='Rotary Club of Pudukkottai Metro seal'
+              width={44}
+              height={44}
+              className='h-11 w-11 object-contain'
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -73,16 +89,15 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-
             <Button
               asChild
-              className='bg-rotary-gold hover:bg-yellow-400! text-white font-semibold px-5 text-sm rounded-sm'
+              className='bg-rotary-gold hover:bg-yellow-500! text-white font-semibold px-5 text-sm rounded-sm cursor-pointer'
             >
               <a href='#membership'>Join Us</a>
             </Button>
           </nav>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile toggle */}
           <button
             className={cn(
               'lg:hidden p-2',
@@ -95,19 +110,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       {isOpen && (
         <div className='lg:hidden bg-white border-t border-gray-100 shadow-lg'>
-          {/* Logo in mobile menu header */}
-          <div className='px-4 pt-4 pb-2 border-b border-gray-100'>
-            <Image
-              src='/logo.png'
-              alt='Rotary Club of Pudukkottai Metro'
-              width={180}
-              height={46}
-              className='h-9 w-auto object-contain'
-            />
-          </div>
           <nav className='flex flex-col px-4 py-4 gap-1'>
             {navLinks.map((link) => (
               <a
@@ -119,16 +124,11 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-
             <Button
               asChild
-              className='w-full bg-rotary-gold hover:bg-yellow-400! text-white font-semibold rounded-sm'
+              className='mt-2 w-full bg-rotary-gold hover:bg-yellow-500! text-white font-semibold rounded-sm cursor-pointer'
             >
-              <a
-                href='#membership'
-                onClick={() => setIsOpen(false)}
-                className='mt-2'
-              >
+              <a href='#membership' onClick={() => setIsOpen(false)}>
                 Join Us
               </a>
             </Button>
