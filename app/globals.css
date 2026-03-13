@@ -5,6 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-rotary-royal-blue: var(--rotary-royal-blue);
+  --color-rotary-azure: var(--rotary-azure);
+  --color-rotary-sky-blue: var(--rotary-sky-blue);
+  --color-rotary-gold: var(--rotary-gold);
+  --color-rotary-light-blue: var(--rotary-light-blue);
+  --color-rotary-text: var(--rotary-text);
   /* ── Shadcn / system tokens ── */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -40,25 +46,25 @@
   --rotary-gold: #f7a81b;
   --rotary-light-blue: #e8f0fa;
   --rotary-text: #2d2d2d;
-  --background: oklch(1 0 0);
-  --background-alt: oklch(0.98 0.01 285);
-  --foreground: oklch(0.141 0.005 285.823);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.646 0.222 41.116);
-  --primary-foreground: oklch(0.98 0.016 73.684);
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.21 0.006 285.885);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.75 0.183 55.934);
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 216 74% 33%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 216 20% 95%;
+  --secondary-foreground: 216 74% 33%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 38 93% 54%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 216 74% 33%;
   --radius: 0.5rem;
 }
 
@@ -66,7 +72,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  border-color: hsl(214 32% 91%);
 }
 body {
   background-color: #ffffff;
