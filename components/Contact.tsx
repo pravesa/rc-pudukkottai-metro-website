@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, MapPin, Send, Phone } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -62,6 +62,25 @@ export default function Contact() {
             <Card className='border border-gray-100 shadow-sm rounded-none overflow-hidden card-hover'>
               <CardContent className='p-6 flex items-start gap-4'>
                 <div className='w-11 h-11 rounded-full bg-[#e8f0fa] flex items-center justify-center shrink-0'>
+                  <Phone size={18} className='text-[#17458f]' />
+                </div>
+                <div>
+                  <p className='font-display text-xs uppercase tracking-widest text-gray-400 font-semibold mb-1'>
+                    Phone
+                  </p>
+                  <a
+                    href='tel:+919842411165'
+                    className='text-[#0067c8] hover:underline font-medium'
+                  >
+                    +91 98424 11165
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className='border border-gray-100 shadow-sm rounded-none overflow-hidden card-hover'>
+              <CardContent className='p-6 flex items-start gap-4'>
+                <div className='w-11 h-11 rounded-full bg-[#e8f0fa] flex items-center justify-center shrink-0'>
                   <MapPin size={18} className='text-[#17458f]' />
                 </div>
                 <div>
@@ -74,24 +93,6 @@ export default function Contact() {
                     Anna Chattiram, Pudukkottai – 622003,
                     <br />
                     Tamil Nadu, India
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className='border border-gray-100 shadow-sm rounded-none overflow-hidden card-hover'>
-              <CardContent className='p-6 flex items-start gap-4'>
-                <div className='w-11 h-11 rounded-full bg-[#e8f0fa] flex items-center justify-center shrink-0'>
-                  <Clock size={18} className='text-[#17458f]' />
-                </div>
-                <div>
-                  <p className='font-display text-xs uppercase tracking-widest text-gray-400 font-semibold mb-1'>
-                    Meetings
-                  </p>
-                  <p className='text-gray-700 text-sm'>
-                    Every Saturday at 7:00 PM
-                    <br />
-                    <span className='text-gray-500'>Twice a month</span>
                   </p>
                 </div>
               </CardContent>
