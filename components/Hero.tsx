@@ -112,19 +112,20 @@ export default function Hero() {
           </p>
 
           <div className='flex flex-col sm:flex-row gap-4'>
-            <a href='#membership'>
-              <Button className='bg-[#f7a81b] hover:bg-yellow-400 text-white font-display text-base tracking-wider uppercase px-8 py-6 rounded-sm font-bold'>
-                Become a Member
-              </Button>
-            </a>
-            <a href='#about'>
-              <Button
-                variant='outline'
-                className='border-white text-white bg-transparent hover:bg-white hover:text-[#17458f] font-display text-base tracking-wider uppercase px-8 py-6 rounded-sm font-bold'
-              >
-                Discover More
-              </Button>
-            </a>
+            <Button
+              asChild
+              className='bg-[#f7a81b] hover:bg-yellow-400! text-white font-display text-base tracking-wider uppercase px-8 py-6 rounded-sm font-bold'
+            >
+              <a href='#membership'>Become a Member</a>
+            </Button>
+
+            <Button
+              asChild
+              variant='outline'
+              className='border-white text-white bg-transparent hover:bg-white! hover:text-[#17458f]! font-display text-base tracking-wider uppercase px-8 py-6 rounded-sm font-bold'
+            >
+              <a href='#about'>Discover More</a>
+            </Button>
           </div>
 
           {/* Stats */}

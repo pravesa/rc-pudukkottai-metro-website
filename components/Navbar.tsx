@@ -73,11 +73,13 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a href='#membership'>
-              <Button className='bg-rotary-gold hover:bg-yellow-500 text-white font-semibold px-5 text-sm rounded-sm'>
-                Join Us
-              </Button>
-            </a>
+
+            <Button
+              asChild
+              className='bg-rotary-gold hover:bg-yellow-500 text-white font-semibold px-5 text-sm rounded-sm'
+            >
+              <a href='#membership'>Join Us</a>
+            </Button>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -117,15 +119,19 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href='#membership'
-              onClick={() => setIsOpen(false)}
-              className='mt-2'
+
+            <Button
+              asChild
+              className='w-full bg-rotary-gold hover:bg-yellow-500 text-white font-semibold rounded-sm'
             >
-              <Button className='w-full bg-rotary-gold hover:bg-yellow-500 text-white font-semibold rounded-sm'>
+              <a
+                href='#membership'
+                onClick={() => setIsOpen(false)}
+                className='mt-2'
+              >
                 Join Us
-              </Button>
-            </a>
+              </a>
+            </Button>
           </nav>
         </div>
       )}
