@@ -11,6 +11,13 @@ const leaders = [
     photo: '/leaders/president.jpg',
   },
   {
+    role: 'Executive Secretary / Director',
+    name: 'J Rajendran',
+    initials: 'JR',
+    color: '#17458f',
+    photo: '/leaders/executive-secretary.jpg',
+  },
+  {
     role: 'Secretary',
     name: 'C Parthiban',
     initials: 'CP',
